@@ -1,29 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-  --background: #0a0a1a;
+  /* Vibrant Forest Green Background */
+  --background: #115e34;
   --foreground: #ffffff;
   
-  /* Brand Colors */
-  --color-sunset: #FF5E3A;
-  --color-violet: #8A2BE2;
-  --color-cyan: #00F2FE;
+  /* Brand Colors from image */
+  --color-primary: #FFDE00; /* Vibrant Yellow */
+  --color-secondary: #FF007F; /* Neon Pink */
+  --color-tertiary: #FFDE00;
   
   /* UI Colors */
-  --color-card-bg: rgba(255, 255, 255, 0.03);
-  --color-card-border: rgba(255, 255, 255, 0.1);
-  --color-card-border-hover: rgba(0, 242, 254, 0.4);
+  --color-card-bg: rgba(0, 0, 0, 0.15);
+  --color-card-border: rgba(255, 222, 0, 0.3);
+  --color-card-border-hover: rgba(255, 0, 127, 0.6);
   
-  --font-heading: 'Outfit', sans-serif;
+  --font-heading: 'Bodoni Moda', serif;
   --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   background-image: 
-    radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.15), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(0, 242, 254, 0.15), transparent 25%);
+    radial-gradient(circle at 15% 50%, rgba(255, 222, 0, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(255, 0, 127, 0.08), transparent 25%);
   font-family: var(--font-body);
   margin: 0;
   padding: 0;
@@ -51,34 +53,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, var(--color-cyan), var(--color-violet), var(--color-sunset));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-primary);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-violet) 0%, var(--color-sunset) 100%);
-  color: white;
+  background: var(--color-primary);
+  color: #000000;
   border: none;
   padding: 12px 24px;
   border-radius: 8px;
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 94, 58, 0.3);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  text-transform: uppercase;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 94, 58, 0.5);
-  background: linear-gradient(135deg, var(--color-sunset) 0%, var(--color-violet) 100%);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  background: var(--color-secondary);
+  color: white;
 }
 
 .btn-secondary {
